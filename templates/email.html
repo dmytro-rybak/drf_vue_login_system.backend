@@ -1,0 +1,166 @@
+{% block html_body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="x-apple-disable-message-reformatting">
+    <title></title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            -webkit-text-size-adjust: 100%;
+            color: #000000;
+            font-family: Roboto, Lucida Grande, Verdana, Arial, sans-serif;
+        }
+        .main-table{
+            border-collapse: collapse;
+            table-layout: fixed;
+            border-spacing: 0;
+            min-width: 320px;
+            margin: 0 auto;
+            width:100%;
+            background-color: #f9f9f9;
+        }
+        .main-column{
+            word-break: break-word;
+            border-collapse: collapse !important;
+        }
+        .main-row, .main-table, .main-column, .u-col {
+            vertical-align: top;
+        }
+        .u-row-container{
+            background-color: transparent;
+        }
+        .u-row{
+            margin: 0 auto;
+            min-width: 320px;
+            max-width: 600px;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+            border-collapse: collapse;
+            display: table;
+            width: 100%;
+        }
+        .u-col{
+            display: table-cell;
+        }
+        .content-column{
+            overflow-wrap:break-word;
+            word-break:break-word;
+        }
+        .verify-button{
+            display:block;
+            padding:14px 44px 13px;
+            line-height:120%;
+            font-size: 16px;
+            background-color: #ff6600;
+            box-sizing: border-box;
+            -webkit-text-size-adjust: none;
+            text-align: center;
+            color: #FFFFFF;
+            border-radius: 4px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            width:auto;
+            max-width:100%;
+            overflow-wrap: break-word;
+            word-break: break-word;
+            word-wrap:break-word;
+            mso-border-alt: none;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+  <table class="main-table">
+  <tbody>
+  <tr class="main-row">
+    <td class="main-column">
+      <div class="u-row-container" style="padding-top: 45px;">
+        <div class="u-row" style="background-color: #003399;">
+            <div class="u-col">
+                <table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+                  <tbody>
+                    <tr>
+                      <td class="content-column" style="padding:31px 10px;">
+                        <div class="content-div" style="color: #e5eaf5; line-height: 140%; text-align: center; word-wrap: break-word;font-size: 28px;">
+                            <span><strong>Verify Your e-mail address</strong></span>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+        </div>
+      </div>
+
+      <div class="u-row-container">
+        <div class="u-row" style="background-color: #ffffff;">
+            <div class="u-col">
+                <table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+                  <tbody>
+                    <tr>
+                      <td class="content-column" style="padding:33px 55px;">
+                        <div style="line-height: 160%; text-align: center; word-wrap: break-word;">
+                          <p style="font-size: 14px; line-height: 160%;"><span style="font-size: 22px; line-height: 35px;">Hi, </span></p>
+                          <p style="font-size: 14px; line-height: 160%;"><span style="font-size: 18px; line-height: 29px;">You're almost ready to get started. Please click on the button below to verify your email address and activate your account!</span></p>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+                  <tbody>
+                    <tr>
+                      <td class="content-column" style="padding:0 10px 60px;">
+                        <div align="center">
+                          <a href="http://localhost:8000/api/v1/activate/{{ uid }}/{{ token }}">
+                            <button class="verify-button" type="button">
+                                <span><strong>VERIFY MY EMAIL</strong></span>
+                            </button>
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+              </div>
+        </div>
+      </div>
+
+      <div class="u-row-container" style="padding-bottom:45px;">
+        <div class="u-row" style="background-color: #003399;">
+            <div class="u-col">
+                <table role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+                  <tbody>
+                    <tr>
+                      <td class="content-column" style="padding:10px;">
+                        <div style="color: #e5eaf5; line-height: 140%; text-align: center; word-wrap: break-word;">
+                          <p style="font-size: 16px; line-height: 140%;"><strong>Thanks for signing up!</strong></p>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+      </div>
+    </td>
+  </tr>
+  </tbody>
+  </table>
+</body>
+</html>
+{% endblock %}
+{% block subject %}
+    Account activation
+{% endblock subject %}
