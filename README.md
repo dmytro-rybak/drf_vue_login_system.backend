@@ -33,4 +33,4 @@ python manage.py runerver
 > You need to click on /jwt/create/ with POST method and type your credentials
 
 ## 10. Authorize with JWT access token:
-> Push authorize button on swagger and insert your token: JWT <token>
+> Push authorize button on swagger and insert your token: JWT your_token
